@@ -1,0 +1,15 @@
+{
+  "name": "wedding_website",
+  "version": "1.0.0",
+  "description": "wedding-website/\r │\r ├── public/                # Frontend files served to the browser\r │   ├── index.html\r │   ├── rsvp.html\r │   ├── styles.css\r │   ├── script.js\r │   └── images/\r │\r ├── server/                # Backend logic\r │   ├── server.js          # Express server\r │   ├── routes/\r │   │   └── rsvp.js        # API route for RSVP submissions\r │   ├── data/\r │   │   └── guests.json    # Stores RSVP data (or SQLite DB)\r │   └── utils/\r │       └── validate.js    # Optional: input validation\r │\r ├── package.json           # Node dependencies\r └── README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.14"
+  }
+}
