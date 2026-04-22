@@ -1,11 +1,16 @@
 /* Global */
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
+    font-size: 40pt;
     color: #444;
     background: #53050C;
 }
 
-/* Font */
+/* Fonts */
 .parisienne-regular {
     font-family: "Parisienne", cursive;
     font-weight: 400;
@@ -24,54 +29,162 @@ body {
   font-style: normal;
 }
 
+.bonheur-royale-regular {
+  font-family: "Bonheur Royale", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* for smaller displays */
+@media (max-width: 600px) {
+    .hero-content {
+        top: 1.5rem;
+        left: 1.5rem;
+        /*  right: 1.5rem; prevents text from touching the edge */
+        font-size: 2.5rem; /* scale down slightly */
+    }
+
+    quote-block {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem; /* allow wrapping */
+        text-align: center; /* optional: looks elegant */
+    }
+
+    .hero-content-quote {
+        width: 70% !important;
+    }
+
+    .quote {
+        font-size: 2rem !important;
+    }
+
+    .hero-content-bottom-banner {
+        bottom: -2rem !important;
+    }
+
+    .names {
+        font-size: 65pt !important;
+    }
+
+    .date {
+        font-size: 35pt !important;
+    }
+
+    .scroll-indicator {
+        bottom: -0.25rem !important;
+        font-size: 70pt !important;
+    }
+}
+
+
 /* Hero */
 .hero {
-    height: 80vh;
-    background-image: url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.50)),
+                url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     color: white;
-    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-content {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2rem 3rem;
-  border-radius: 12px;
-  width: 350px;
-  color: white;
-  /* transition: clip-path 0.5s ease, border-radius 0.5s ease; */
-  
-  /* Start as a rectangle */
-  /* clip-path: inset(0); */
+.hero-content-quote {
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    text-align: justify;
+    width: 40%;
 }
 
-/* 
-.hero-content:hover {
-    /* Heart shape using polygon
-    width: 300px; 
-	height: 300px;
-    clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");  
-    /* border-radius: 0;
-    transform: scale(5)
-} */
+.author {
+    /* display: block; */
+    text-align: right;
+    margin-top: 0.3rem;
+}
+ 
+.quote {
+    margin: 0; /* remove default p spacing */
+}
 
+.quote:first-of-type {
+    margin-top: 1rem; /* keep the block in place */
+}
 
+.quote + .quote {
+    margin-top: 0.3rem; /* small gap between quote and author */
+}
+
+.hero-content-bottom-banner {
+    position: absolute;
+    bottom: -11rem;
+    right: 0rem;
+    padding: 2rem 3rem;
+    text-align: right;
+    margin: 0;
+    z-index: 2;
+    transform: none;
+    flex-shrink: 0;
+}
 
 .names {
-    font-size: 3rem;
+    font-size: 140pt;
     font-weight: 300;
-    letter-spacing: 2px;
+    line-height: 0.75;
 }
 
 .date,
 .location {
-    margin: 0.3rem 0;
-    font-size: 1.2rem;
+    /* margin: 0.3rem 0; */
+    font-size: 95pt;
 }
 
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(-3px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(15px);
+    }
+}
+
+
+@keyframes lighten {
+    0% {
+        filter: brightness(1);
+    }
+    20% {
+        filter: brightness(1.5);
+    }
+    50% {
+        filter: brightness(1);
+    }
+    80% {
+        filter: brightness(1.3);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    bottom: -1.5rem;      /* same as your banner */
+    left: 50%;
+    font-size: 105pt;
+    opacity: 0.8;
+    z-index: 2;
+    animation: 
+        lighten 1.8s forwards ease-out,
+        bounce 1.5s infinite ease-in-out;
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+}
 
 /* Button */
 .btn-primary {
@@ -106,7 +219,7 @@ body {
     font-weight: 500;
 }
 
-/* SECTIONS */
+/* Sections */
 .section {
     padding: 4rem 2rem;
     max-width: 900px;
@@ -128,7 +241,7 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* FOOTER */
+/* Footer */
 .footer {
     text-align: center;
     padding: 2rem;

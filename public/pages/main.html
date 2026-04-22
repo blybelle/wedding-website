@@ -8,20 +8,56 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Parisienne&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Parisienne&family=Passions+Conflict&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Lavishly+Yours&family=Parisienne&family=Passions+Conflict&display=swap" rel="stylesheet">
     <title>Blythe & Dwayne</title>
 </head>
 
-<body class="passions-conflict-regular">
+<body class="bonheur-royale-regular">
 
-    <!-- HERO SECTION -->
+    <!-- Hero Scetion -->
     <header class="hero">
-        <div class="hero-content">
-            <h1 class="names">Blythe & Dwayne</h1>
-            <p class="date">21<sup>th</sup> July 2027</p>
-            <!-- <p class="location">Ayr, Scotland</p> -->
-            <!-- <a href="#rsvp" class="btn-primary">RSVP</a> -->
+        <div class="hero-content-quote">
+            <p class="quote">
+                <q>To the world you may be one person, but to one person you are the world.</q>
+                <span class="author">&mdash; Dr. Seuss</span>
+            </p>
+        
         </div>
+        <div class="hero-content-bottom-banner passions-conflict-regular">
+            <p class="names">Blythe & Dwayne<br>
+            <span class="date">21<sup>th</sup> July 2027</span></p>
+            <!-- <a href="#rsvp" class="btn-primary">RSVP</a> -->
+             
+            <!-- <div id="rsvp-root"></div>
+            <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+            <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+            <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+            <script type="text/babel" src="../js/RSVPForm.js"></script> -->
+        </div>
+
+        <div class="scroll-indicator">
+            <span style="display:inline-block; transform: rotate(90deg);">&raquo;</span>
+            <script>
+                document.addEventListener("scroll", () => {
+                    const hero = document.querySelector(".hero");
+                    const indicator = document.querySelector(".scroll-indicator");
+                    
+                    console.log(hero.offsetHeight);
+                    const heroHeight = hero.offsetHeight;
+                    const scrollY = window.scrollY;
+
+                    if (scrollY > heroHeight * 0.4) {
+                        indicator.style.opacity = "0";
+                        indicator.style.pointerEvents = "none";
+                    } else {
+                        indicator.style.opacity = "1";
+                        indicator.style.pointerEvents = "auto";
+                    }
+                });
+            </script>
+        </div>
+
     </header>
 
     <!-- Navigation -->
