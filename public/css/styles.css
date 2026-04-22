@@ -1,0 +1,137 @@
+/* Global */
+body {
+    margin: 0;
+    color: #444;
+    background: #53050C;
+}
+
+/* Font */
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.passions-conflict-regular {
+  font-family: "Passions Conflict", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Hero */
+.hero {
+    height: 80vh;
+    background-image: url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  width: 350px;
+  color: white;
+  /* transition: clip-path 0.5s ease, border-radius 0.5s ease; */
+  
+  /* Start as a rectangle */
+  /* clip-path: inset(0); */
+}
+
+/* 
+.hero-content:hover {
+    /* Heart shape using polygon
+    width: 300px; 
+	height: 300px;
+    clip-path: path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402m5.726-20.583c-2.203 0-4.446 1.042-5.726 3.238-1.285-2.206-3.522-3.248-5.719-3.248-3.183 0-6.281 2.187-6.281 6.191 0 4.661 5.571 9.429 12 15.809 6.43-6.38 12-11.148 12-15.809 0-4.011-3.095-6.181-6.274-6.181");  
+    /* border-radius: 0;
+    transform: scale(5)
+} */
+
+
+
+.names {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.date,
+.location {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+}
+
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #b28d6e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: #9c785c;
+}
+
+
+/* Nav */
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: #d4b99d;
+    border-bottom: 1px solid #d4b99d;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+/* SECTIONS */
+.section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.detail-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background: #eee;
+    margin-top: 3rem;
+}
