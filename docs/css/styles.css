@@ -83,7 +83,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.50)),
-                url('../images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
+                url('images/6D40CC4C-C634-4D60-8605-AB55EE5D64CE.jpeg') center/cover no-repeat;
     display: flex;
     color: white;
     justify-content: center;
